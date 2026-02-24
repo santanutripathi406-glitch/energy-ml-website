@@ -53,6 +53,44 @@
         <li>Failure risk classification</li>
     </ul>
 </section>
+<section id="dataset">
+    <h2>Dataset Description</h2>
+
+    <p>
+        The dataset represents operational behavior of distribution transformers 
+        under normal and stressed electrical conditions. The data structure is 
+        based on real-world transformer monitoring parameters commonly used in 
+        power distribution systems.
+    </p>
+
+    <h3>Input Features</h3>
+    <ul>
+        <li>Transformer temperature (°C)</li>
+        <li>Load percentage (%)</li>
+        <li>Voltage fluctuation (%)</li>
+        <li>Operating condition indicators</li>
+    </ul>
+
+    <h3>Data Characteristics</h3>
+    <ul>
+        <li>Time-series sensor-based measurements</li>
+        <li>Includes normal, warning, and critical operating ranges</li>
+        <li>Failure risk derived using engineering safety thresholds</li>
+    </ul>
+
+    <h3>Preprocessing</h3>
+    <ul>
+        <li>Data normalization for stable prediction</li>
+        <li>Threshold-based risk labeling</li>
+        <li>Feature selection for low computational cost</li>
+    </ul>
+
+    <p>
+        The dataset design supports lightweight machine learning deployment 
+        in rural environments where computational resources and monitoring 
+        infrastructure are limited.
+    </p>
+</section>
 
 <section id="abstract">
 <h2>Abstract</h2>
