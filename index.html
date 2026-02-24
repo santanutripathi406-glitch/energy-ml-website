@@ -12,55 +12,52 @@
 <header>
     <h1>Lightweight Energy-Efficient ML Model</h1>
     <p>Predicting Transformer Failures in Rural Power Distribution Systems</p>
+    <p><strong>Author:</strong> Santanu Tripathi</p>
+    <p><strong>Email:</strong> santanutripathi406@email.com</p>
 </header>
 
 <nav>
-    <a href="#about">About</a>
-    <a href="#problem">Problem</a>
-    <a href="#method">Methodology</a>
     <a href="#abstract">Abstract</a>
+    <a href="#method">Methodology</a>
     <a href="#dataset">Dataset</a>
     <a href="#architecture">Model</a>
     <a href="#results">Results</a>
     <a href="#future">Future Work</a>
     <a href="#demo">Prediction Demo</a>
-    <a href="#contact">Contact</a>
 </nav>
 
-<section id="about">
-    <h2>About the Project</h2>
+<section id="abstract">
+    <h2>Abstract</h2>
     <p>
-        This research focuses on predicting transformer failures using a lightweight 
-        machine learning model designed for rural power distribution systems. 
-        The goal is to improve reliability while minimizing computational cost.
-    </p>
-</section>
+        Transformer failures in rural power distribution networks often lead to 
+        prolonged outages and increased maintenance costs. This project presents 
+        a lightweight, energy-efficient machine learning model designed to predict 
+        transformer failure risk using minimal computational resources.
 
-<section id="problem">
-    <h2>Problem Statement</h2>
-    <p>
-        Rural transformers often fail due to overload, overheating, and irregular 
-        maintenance. Early prediction can reduce power outages and maintenance costs.
+        The system utilizes operational parameters including temperature, load 
+        percentage, and voltage fluctuation to classify transformer health into 
+        risk categories. The approach prioritizes deployability in low-resource 
+        environments while maintaining reliable predictive performance.
     </p>
 </section>
 
 <section id="method">
     <h2>Methodology</h2>
     <ul>
-        <li>Data collection from transformer sensors</li>
-        <li>Feature selection for efficiency</li>
-        <li>Lightweight ML prediction model</li>
-        <li>Failure risk classification</li>
+        <li>Collection of transformer operational parameters</li>
+        <li>Feature selection for efficient prediction</li>
+        <li>Lightweight ML-based risk classification</li>
+        <li>Visualization of predicted failure risk</li>
     </ul>
 </section>
+
 <section id="dataset">
     <h2>Dataset Description</h2>
 
     <p>
         The dataset represents operational behavior of distribution transformers 
-        under normal and stressed electrical conditions. The data structure is 
-        based on real-world transformer monitoring parameters commonly used in 
-        power distribution systems.
+        under normal and stressed electrical conditions. The structure is based 
+        on standard monitoring parameters used in power distribution systems.
     </p>
 
     <h3>Input Features</h3>
@@ -74,75 +71,70 @@
     <h3>Data Characteristics</h3>
     <ul>
         <li>Time-series sensor-based measurements</li>
-        <li>Includes normal, warning, and critical operating ranges</li>
+        <li>Includes safe, warning, and critical operating ranges</li>
         <li>Failure risk derived using engineering safety thresholds</li>
     </ul>
 
     <h3>Preprocessing</h3>
     <ul>
-        <li>Data normalization for stable prediction</li>
-        <li>Threshold-based risk labeling</li>
-        <li>Feature selection for low computational cost</li>
+        <li>Data normalization</li>
+        <li>Threshold-based labeling</li>
+        <li>Feature selection for lightweight computation</li>
     </ul>
 
     <p>
-        The dataset design supports lightweight machine learning deployment 
-        in rural environments where computational resources and monitoring 
-        infrastructure are limited.
+        The dataset structure reflects practical transformer operating conditions 
+        used in predictive maintenance studies and supports deployment in 
+        low-resource rural environments.
     </p>
 </section>
 
-<section id="abstract">
-<h2>Abstract</h2>
-<p>
-Power transformer failures in rural distribution systems lead to frequent outages, high maintenance costs, and reduced reliability of electricity supply. 
-This project proposes a lightweight and energy-efficient machine learning model designed to predict transformer failure risk using operational parameters such as temperature, load percentage, and voltage fluctuation. 
-
-The proposed approach focuses on computational efficiency so that prediction can be performed with minimal hardware requirements, making it suitable for rural deployment. 
-The system enables early warning detection, allowing preventive maintenance and improved power distribution reliability.
-</p>
-</section>
-
-<section id="dataset">
-<h2>Dataset Description</h2>
-<p>
-The dataset used in this study consists of operational parameters collected from distribution transformers. 
-Key features include temperature readings, load percentage, voltage fluctuation levels, and historical failure records.
-
-Data preprocessing involved normalization, removal of inconsistent values, and feature selection to ensure efficient model training. 
-The dataset represents real-world operating conditions in rural power systems, enabling accurate risk prediction.
-</p>
-</section>
-
 <section id="architecture">
-<h2>Model Architecture</h2>
-<p>
-The prediction system uses a lightweight supervised machine learning model optimized for low computational cost. 
-Selected features are processed through a classification model that categorizes transformer status into low-risk, medium-risk, or high-risk failure probability.
+    <h2>Model Architecture</h2>
 
-The model emphasizes simplicity and efficiency, making it suitable for deployment in resource-constrained environments while maintaining reliable prediction capability.
-</p>
+    <p>
+        The proposed system uses a lightweight classification approach optimized 
+        for low computational overhead and real-time prediction capability.
+    </p>
+
+    <ul>
+        <li>Low memory and energy consumption</li>
+        <li>Fast inference suitable for edge deployment</li>
+        <li>Interpretable risk classification</li>
+    </ul>
+
+    <h3>Prediction Output</h3>
+    <ul>
+        <li>Low Risk — Normal condition</li>
+        <li>Medium Risk — Warning condition</li>
+        <li>High Risk — Potential failure</li>
+    </ul>
 </section>
 
 <section id="results">
-<h2>Results and Accuracy</h2>
-<p>
-Experimental evaluation demonstrates that the proposed model successfully identifies high-risk transformer conditions with strong prediction reliability. 
-The lightweight design achieves efficient performance while maintaining high classification accuracy.
+    <h2>Results and Accuracy</h2>
+    <p>
+        The model demonstrates reliable prediction performance while maintaining 
+        low computational requirements. The system effectively identifies 
+        transformer risk conditions using minimal input parameters, making it 
+        suitable for rural deployment environments.
+    </p>
 
-The system provides real-time failure risk assessment, enabling proactive maintenance decisions and reducing unexpected power interruptions in rural distribution systems.
-</p>
+    <ul>
+        <li>High prediction reliability</li>
+        <li>Low computational cost</li>
+        <li>Fast real-time prediction capability</li>
+    </ul>
 </section>
 
 <section id="future">
-<h2>Future Work</h2>
-<ul>
-<li>Integration with real-time IoT transformer sensors</li>
-<li>Deployment as a web-based monitoring dashboard</li>
-<li>Incorporation of deep learning models for improved prediction</li>
-<li>Large-scale testing on real distribution networks</li>
-<li>Mobile application for field monitoring</li>
-</ul>
+    <h2>Future Work</h2>
+    <ul>
+        <li>Integration with real IoT transformer sensors</li>
+        <li>Deployment on edge computing devices</li>
+        <li>Real-time monitoring dashboard</li>
+        <li>Expanded dataset from field measurements</li>
+    </ul>
 </section>
     
 <section id="demo">
