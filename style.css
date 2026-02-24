@@ -13,8 +13,11 @@ header {
 
 nav {
     background: #1e3799;
-    padding: 10px;
+    padding: 12px;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav a {
