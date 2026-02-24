@@ -1,3 +1,5 @@
+let riskChart = null; // store chart globally
+
 function predict() {
     const temp = document.getElementById("temp").value;
     const load = document.getElementById("load").value;
@@ -17,7 +19,14 @@ function predict() {
     document.getElementById("result").innerText = label;
 
     const ctx = document.getElementById("riskChart");
-    new Chart(ctx, {
+
+    // If chart already exists → destroy it
+    if (riskChart) {
+        riskChart.destroy();
+    }
+
+    // Create new chart with updated value
+    riskChart = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: ['Failure Risk Level'],
@@ -25,6 +34,14 @@ function predict() {
                 label: 'Risk %',
                 data: [riskValue]
             }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100
+                }
+            }
         }
     });
 }
