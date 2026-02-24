@@ -23,31 +23,31 @@ function predict() {
         accuracy = "Prediction Confidence: 94%";
     }
 
-    document.getElementById("result").innerText = label;
-    document.getElementById("accuracy").innerText = accuracy;
+    const resultEl = document.getElementById("result");
+    const accuracyEl = document.getElementById("accuracy");
+    const canvas = document.getElementById("riskChart");
 
-    const ctx = document.getElementById("riskChart");
+    if (resultEl) resultEl.innerText = label;
+    if (accuracyEl) accuracyEl.innerText = accuracy;
 
-    if (riskChart) {
-        riskChart.destroy();
-    }
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d");
+
+    if (riskChart) riskChart.destroy();
 
     riskChart = new Chart(ctx, {
-        type: 'bar',
+        type: "bar",
         data: {
-            labels: ['Failure Risk Level'],
+            labels: ["Failure Risk"],
             datasets: [{
-                label: 'Risk %',
                 data: [riskValue],
                 backgroundColor: color
             }]
         },
         options: {
             scales: {
-                y: {
-                    beginAtZero: true,
-                    max: 100
-                }
+                y: { beginAtZero: true, max: 100 }
             }
         }
     });
@@ -60,7 +60,5 @@ function resetForm() {
     document.getElementById("result").innerText = "";
     document.getElementById("accuracy").innerText = "";
 
-    if (riskChart) {
-        riskChart.destroy();
-    }
+    if (riskChart) riskChart.destroy();
 }
