@@ -1,19 +1,30 @@
 function predict() {
-    let temp = document.getElementById("temp").value;
-    let load = document.getElementById("load").value;
-    let voltage = document.getElementById("voltage").value;
+    const temp = document.getElementById("temp").value;
+    const load = document.getElementById("load").value;
+    const voltage = document.getElementById("voltage").value;
 
-    if(temp === "" || load === "" || voltage === "") {
-        document.getElementById("result").innerText = "Please enter all values.";
-        return;
+    let riskValue = 10;
+    let label = "LOW RISK";
+
+    if (temp > 80 || load > 85 || voltage > 20) {
+        riskValue = 90;
+        label = "HIGH RISK";
+    } else if (temp > 60 || load > 70 || voltage > 10) {
+        riskValue = 50;
+        label = "MEDIUM RISK";
     }
 
-    // Simple demo logic (replace with real ML later)
-    if(temp > 80 || load > 85 || voltage > 15) {
-        document.getElementById("result").innerText = "⚠ HIGH FAILURE RISK";
-        document.getElementById("result").style.color = "red";
-    } else {
-        document.getElementById("result").innerText = "✅ LOW FAILURE RISK";
-        document.getElementById("result").style.color = "green";
-    }
+    document.getElementById("result").innerText = label;
+
+    const ctx = document.getElementById("riskChart");
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Failure Risk Level'],
+            datasets: [{
+                label: 'Risk %',
+                data: [riskValue]
+            }]
+        }
+    });
 }
