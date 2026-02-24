@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformer Failure Prediction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Lightweight Energy-Efficient ML Model</h1>
+    <p>Predicting Transformer Failures in Rural Power Distribution Systems</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#problem">Problem</a>
+    <a href="#method">Methodology</a>
+    <a href="#demo">Prediction Demo</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <h2>About the Project</h2>
+    <p>
+        This research focuses on predicting transformer failures using a lightweight 
+        machine learning model designed for rural power distribution systems. 
+        The goal is to improve reliability while minimizing computational cost.
+    </p>
+</section>
+
+<section id="problem">
+    <h2>Problem Statement</h2>
+    <p>
+        Rural transformers often fail due to overload, overheating, and irregular 
+        maintenance. Early prediction can reduce power outages and maintenance costs.
+    </p>
+</section>
+
+<section id="method">
+    <h2>Methodology</h2>
+    <ul>
+        <li>Data collection from transformer sensors</li>
+        <li>Feature selection for efficiency</li>
+        <li>Lightweight ML prediction model</li>
+        <li>Failure risk classification</li>
+    </ul>
+</section>
+
+<section id="demo">
+    <h2>Prediction Demo</h2>
+
+    <div class="form-box">
+        <label>Temperature (°C)</label>
+        <input type="number" id="temp">
+
+        <label>Load (%)</label>
+        <input type="number" id="load">
+
+        <label>Voltage Fluctuation</label>
+        <input type="number" id="voltage">
+
+        <button onclick="predict()">Predict Failure Risk</button>
+
+        <h3 id="result"></h3>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Research Project — Electrical Engineering</p>
+</section>
+
+<footer>
+    <p>© 2025 Transformer Prediction Research</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
